@@ -1,0 +1,14 @@
+.popOver-container {
+  @include glass-02;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  border-radius: 10px;
+  z-index: 9;
+  border: none;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    max-width: 360px;
+  }
+}

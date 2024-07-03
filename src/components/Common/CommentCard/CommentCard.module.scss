@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  @include flex-arrange(space-between, center);
+}
+
+.reply-button {
+  @include font-style(1.4rem, $gray-01, 600);
+}
+
+.like {
+  @include flex-arrange;
+  @include font-style(1.2rem, $gray-01, 500);
+  gap: 6px;
+  cursor: pointer;
+}
+
+.container {
+  @include flex-arrange;
+  gap: 24px;
+}
+
+.edit {
+  @include flex-arrange(space-between, center);
+  gap: 24px;
+}
+
+.content {
+  color: $white-01;
+  word-break: break-all;
+  white-space: pre-wrap;
+  line-height: 135%;
+
+  .textarea {
+    width: 100%;
+    font-size: 1.6rem;
+    resize: none;
+    border-radius: 4px;
+    background-color: $gray-03;
+    padding: 8px;
+  }
+}

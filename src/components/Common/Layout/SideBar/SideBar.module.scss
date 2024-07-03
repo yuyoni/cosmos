@@ -1,0 +1,54 @@
+.sideBar-container {
+  @include glass-01;
+  width: calc(100% - 20px);
+  height: 72px;
+  padding: 12px 24px;
+  display: flex;
+  position: fixed;
+  z-index: 99;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 70px;
+
+  .icon-wrapper {
+    @include flex-arrange(space-between, center);
+    width: 100%;
+    padding: 0 20px;
+
+    img {
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .icon-box {
+      cursor: pointer;
+    }
+
+    .add-icon {
+      height: 32px;
+      background-color: $glass-02;
+      border-radius: 50%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 76px;
+    height: 268px;
+    backdrop-filter: blur(15px);
+    padding: 30px 0;
+    position: relative;
+    position: fixed;
+    z-index: 9;
+    left: unset;
+    transform: unset;
+    top: 110px;
+    margin: 0;
+    .icon-wrapper {
+      flex-direction: column;
+      .add-icon {
+        order: 1;
+      }
+    }
+  }
+}

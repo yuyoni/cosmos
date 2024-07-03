@@ -1,0 +1,192 @@
+@import 'fonts';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Pretendard', Helvetica;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    &::-webkit-scrollbar {
+      display: block;
+      width: 12px;
+      height: 12px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      outline: none;
+      border-radius: 10px;
+      border: 3px solid transparent;
+      color: $gray-01;
+      box-shadow: inset 6px 6px 0;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: inherit;
+    }
+  }
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Pretendard', Helvetica;
+  font-size: 1.6rem;
+  background-image: url('/images/cosmos.png');
+  background-size: cover;
+  background-attachment: fixed;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+body.modal-open {
+  overflow-y: hidden;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: $black-01;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+textarea {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.w-md-editor {
+  border-radius: 5px !important;
+  background-color: #585c6d !important;
+  --md-editor-box-shadow-color: transparent !important;
+  color: white !important;
+  line-height: 150%;
+
+  &-toolbar {
+    border-radius: 5px 5px 0 0 !important;
+    padding: 0 12px !important;
+    background-color: #585c6d !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+
+    flex-direction: column-reverse;
+    align-items: flex-start !important;
+
+    ul {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      &:last-child {
+        margin-top: 4px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      padding: 0 12px !important;
+      flex-direction: row;
+      justify-content: space-between !important;
+
+      ul:last-child {
+        margin-top: 6px;
+      }
+    }
+  }
+
+  a {
+    color: $primary-02;
+    text-decoration: dashed;
+  }
+}
+
+.w-md-editor-text {
+  padding: 16px 20px !important;
+  font-size: 1.6rem !important;
+
+  span {
+    color: $white-01 !important;
+  }
+
+  .w-md-editor-text-pre {
+    .token.content {
+      color: $white-01 !important;
+    }
+
+    .token.url {
+      color: #ccb3eb !important;
+      .token.content {
+        color: #ccb3eb !important;
+      }
+    }
+
+    .token.bold {
+      color: white;
+      font-weight: 700 !important;
+    }
+
+    .token.italic {
+      .token.content {
+        font-style: italic;
+      }
+    }
+
+    .token.strike {
+      .token.content {
+        color: $gray-01 !important;
+        text-decoration: line-through;
+      }
+    }
+  }
+}
+
+.w-md-editor-bar {
+  display: none;
+}
+
+.w-md-editor-preview {
+  padding: 16px 20px !important;
+}
+
+.wmde-markdown {
+  line-height: 240%;
+  @include markdown-style;
+}
+
+textarea::placeholder,
+input::placeholder {
+  @include font-style(1.6rem, $gray-01, 600);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-progress-bar {
+}

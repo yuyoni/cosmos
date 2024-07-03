@@ -1,0 +1,55 @@
+.question-container {
+  @include glass-01;
+  width: 100%;
+  padding: 12px 24px;
+  margin-bottom: 8px;
+  position: relative;
+  transition: 0.3s all;
+  border-width: 0px;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    margin-bottom: 12px;
+    border-width: 1px;
+  }
+
+  .question-title {
+    @include flex-arrange(flex-start, center);
+
+    .viewmore-icon {
+      opacity: 0.7;
+      width: 18px;
+      height: 18px;
+    }
+
+    @media (min-width: 768px) {
+      @include flex-arrange(space-between, center);
+      .viewmore-icon {
+        opacity: 1;
+        width: auto;
+        height: auto;
+      }
+    }
+    strong {
+      @include font-style(14px, $gray-02);
+    }
+  }
+
+  h3 {
+    margin-top: 4px;
+    @include font-style(16px, $white-01, 700);
+  }
+
+  @media (min-width: 768px) {
+    border-radius: 10px;
+  }
+
+  .unauthorized-content {
+    @include flex-arrange;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+  }
+}

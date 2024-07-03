@@ -1,0 +1,54 @@
+.wrapper {
+  @include flex-arrange(flex-start, flex-end);
+  @include glass-02(none);
+  flex-direction: column;
+  width: 100%;
+  gap: 40px;
+  padding: 20px;
+
+  position: relative;
+
+  @include font-style(2rem, $white-01, 700);
+  padding-bottom: 70px;
+}
+
+.back {
+  position: absolute;
+  top: 33px;
+  left: 20px;
+}
+
+.title {
+  margin: 1rem 0 8px;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.button-container {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 614px;
+    padding: 30px;
+    border-radius: 10px;
+    border: $glass-edge-01;
+  }
+
+  .back {
+    top: 43px;
+    left: 30px;
+  }
+
+  .button-container {
+    width: 156px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 740px;
+  }
+}

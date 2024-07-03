@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 8px;
+
+  .textarea-wrapper {
+    position: relative;
+    width: 100%;
+
+    .textarea {
+      border: none;
+      width: 100%;
+      height: 48px;
+      line-height: 135%;
+      resize: none;
+      font-size: 1.6rem;
+      border-radius: 5px;
+      padding: 15px 16px;
+      touch-action: none;
+
+      @include color($black-03, $white-01);
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .error {
+      position: absolute;
+      font-size: 1.3rem;
+      color: #ed1c24;
+      padding-left: 16px;
+      right: 0px;
+      bottom: -19px;
+    }
+  }
+}

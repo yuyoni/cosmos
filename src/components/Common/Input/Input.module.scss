@@ -1,0 +1,13 @@
+.wrapper {
+  width: 100%;
+}
+
+.input {
+  border: none;
+  width: 100%;
+  resize: none;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  padding: 15px 16px;
+  @include color($black-03, $white-01);
+}

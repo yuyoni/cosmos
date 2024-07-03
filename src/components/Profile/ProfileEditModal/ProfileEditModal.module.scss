@@ -1,0 +1,76 @@
+.profile-edit-Form {
+  @include font-style(1.6rem, $white-01, 700);
+  width: 380px;
+  height: auto;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image-edit {
+  position: relative;
+  margin-bottom: 12px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.name {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.image-delete-button {
+  color: $gray-02;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.introduce {
+  font-weight: 700;
+  margin-top: 30px;
+
+  textarea {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 93px;
+    background-color: $black-03;
+    color: $white-01;
+    font-weight: 600;
+    margin-top: 12px;
+    border-radius: 5px;
+    padding: 15px 20px;
+    resize: none;
+  }
+
+  .textareaActive {
+    @include font-style(1.4rem, $white-01, 600);
+  }
+}
+
+.flex-grow-div {
+  flex-grow: 1;
+  height: auto;
+  min-height: 20px;
+}
+
+.edit-button {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .edit-button {
+    margin-bottom: 30px;
+  }
+
+  .introduce {
+    margin-bottom: 20px;
+
+    textarea {
+      margin-bottom: 0;
+    }
+  }
+}

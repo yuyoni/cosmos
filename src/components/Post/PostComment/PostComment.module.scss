@@ -1,0 +1,42 @@
+.wrapper {
+  @include flex-arrange(center, flex-start);
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  scrollbar-width: none;
+  border-radius: 5px;
+}
+
+.comment-list {
+  padding-bottom: 20px;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  border-image-slice: 1;
+  margin-bottom: 20px;
+
+  &:first-child {
+    padding-top: 20px;
+  }
+
+  &:last-child {
+    border: none;
+    padding-bottom: 0px;
+  }
+}
+
+.no-comment {
+  @include flex-arrange;
+  width: 100%;
+  height: 200px;
+  color: $gray-01;
+}

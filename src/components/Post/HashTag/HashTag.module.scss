@@ -1,0 +1,15 @@
+.wrapper {
+  @include flex-arrange(space-between, center);
+  height: 24px;
+  font-size: 1.2rem;
+  padding: 4px 12px;
+  gap: 6px;
+  border-radius: 5px;
+}
+
+@each $hashtag, $colors in $hashtag-colors {
+  .#{$hashtag} {
+    background-color: nth($colors, 1);
+    color: nth($colors, 2);
+  }
+}

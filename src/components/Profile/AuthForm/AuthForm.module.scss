@@ -1,0 +1,43 @@
+.auth-container {
+  width: 100%;
+  height: 100%;
+
+  .auth-wrapper {
+    @include flex-arrange(center, flex-start);
+    h2 {
+      @include font-style(1.6rem, $white-01, 700);
+    }
+
+    .auth-Form {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      .auth-generation,
+      .auth-name {
+        height: 100px;
+
+        h2 {
+          margin-bottom: 12px;
+        }
+
+        small {
+          color: red;
+        }
+      }
+
+      .auth-image {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        span {
+          @include font-style(1.2rem, $gray-01, 500);
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 380px;
+    height: auto;
+  }
+}

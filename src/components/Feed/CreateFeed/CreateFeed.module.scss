@@ -1,0 +1,179 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 70px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 0px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .profile-image {
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .user {
+      @include flex-arrange;
+      position: relative;
+      background-color: $gray-01;
+      width: 44px;
+      height: 44px;
+      border-radius: 100px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      position: relative;
+
+      .text {
+        @include font-style(1.6rem, $white-01);
+        width: 100%;
+        background-color: $black-03;
+        padding: 16px;
+        border-radius: 5px;
+        resize: none;
+        white-space: pre-wrap;
+      }
+
+      .error {
+        position: absolute;
+        right: 12px;
+        bottom: 90px;
+        font-size: 1.3rem;
+        color: #ed1c24;
+        padding-left: 16px;
+      }
+
+      .limit {
+        position: absolute;
+        right: 16px;
+        top: 105px;
+        font-size: 1.1rem;
+        color: $gray-01;
+        padding-left: 16px;
+      }
+
+      .addImage {
+        width: 100%;
+        height: 102px;
+
+        .image-wrapper {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          gap: 12px;
+
+          .preview-box {
+            display: flex;
+            width: 100%;
+            justify-content: left;
+            gap: 7px;
+            // overflow: scroll;
+            // scrollbar-width: none;
+
+            .preview-container {
+              position: relative;
+              .preview-wrapper {
+                position: relative;
+                width: 102px;
+                height: 102px;
+                border-radius: 5px;
+
+                @media (min-width: 768px) {
+                  width: 110px;
+                  height: 110px;
+                }
+
+                .file-preview {
+                  width: 100%;
+                  height: 102px;
+                  border-radius: 5px;
+
+                  @media (min-width: 768px) {
+                    height: 110px;
+                  }
+                }
+              }
+            }
+            .close {
+              width: 18px;
+              height: 18px;
+              position: absolute;
+              right: 0.5px;
+              top: 0.5px;
+              z-index: 1;
+            }
+          }
+
+          .file-label {
+            @include flex-arrange;
+            background-color: $black-03;
+            width: 102px;
+            height: 102px;
+            border-radius: 5px;
+            cursor: pointer;
+            flex-shrink: 0;
+
+            @media (min-width: 768px) {
+              width: 110px;
+              height: 110px;
+            }
+
+            .image-icon-wrapper {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 6px;
+
+              .image-icon {
+                width: 18px;
+                height: 18px;
+              }
+            }
+
+            .label-text {
+              color: $gray-02;
+              font-size: 1.2rem;
+              display: inline;
+            }
+
+            .current-upload-image {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .file-input {
+            position: absolute;
+            width: 0;
+            height: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 0;
+          }
+        }
+      }
+
+      @media (min-width: 768px) {
+        width: 100%;
+        gap: 12px;
+      }
+    }
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+  .button {
+    width: 156px;
+    margin-top: 30px;
+    margin-left: auto;
+  }
+}

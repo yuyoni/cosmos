@@ -1,0 +1,93 @@
+.search-profile {
+  @include glass-01;
+  gap: 20px;
+  width: 100%;
+  padding: 20px 30px;
+  position: relative;
+  border-radius: 0px;
+  border-width: 0;
+  color: $white-01;
+  transition: transform 0.15s ease-in-out;
+
+  &:hover {
+    // 포스트 카드에 hover시 스타일 미정이라 임시로 추가. 추후 삭제 or 수정 예정
+    transform: scale(1.01);
+  }
+
+  @media (min-width: 768px) {
+    border-radius: 10px;
+    border-width: 1px;
+  }
+
+  .profile-image {
+    border-radius: 50%;
+  }
+
+  .profile-content {
+    @include flex-arrange(flex-start);
+    gap: 20px;
+    cursor: pointer;
+  }
+  .profile-infomation {
+    @include flex-arrange(flex-start, flex-start);
+    gap: 12px;
+    flex-direction: column;
+
+    & > div {
+      @include flex-arrange(flex-start);
+
+      &.profile-description {
+        display: none;
+
+        @media (min-width: 768px) {
+          display: unset;
+        }
+      }
+    }
+  }
+
+  .profile-name {
+    @include font-style(16px, $white-01, 700);
+    gap: 7px;
+  }
+
+  .profile-follow {
+    font-size: 14px;
+    gap: 20px;
+
+    & > div {
+      @include flex-arrange(flex-start);
+      gap: 8px;
+    }
+
+    span {
+      font-weight: 500;
+      color: $gray-02;
+    }
+
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  .profile-description {
+    @include font-style(14px, $gray-03, 500);
+  }
+
+  .profile-description-mobile {
+    margin: 20px 0 0;
+    padding-top: 20px;
+    text-align: center;
+    border-top: $glass-edge-01;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 30px;
+    right: 23px;
+  }
+}

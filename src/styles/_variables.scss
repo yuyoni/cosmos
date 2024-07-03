@@ -1,0 +1,65 @@
+$primary-01: #8576ff;
+$primary-02: #efe3ff;
+
+$black-01: #212531;
+$black-02: #404559;
+$black-03: #585c6d;
+
+$gray-01: #a0a5bb;
+$gray-02: #c2c7d9;
+$gray-03: #f1f3fa;
+
+$white-01: #ffffff;
+$white-02: #f6f6f6;
+
+$red-01: #ed1c24;
+
+$glass-01: rgba(88, 92, 109, 0.2);
+$glass-02: rgba(88, 92, 109, 0.4);
+
+$glass-edge-01: 1px solid rgba(255, 255, 255, 0.15);
+
+$pink-01: #ff5151;
+$pink-02: #ffeaea;
+
+$orange-01: #ff7512;
+$orange-02: #ffe1cc;
+
+$yellow-01: #e2b000;
+$yellow-02: #fff1be;
+
+$green-01: #65c900;
+$green-02: #ddf2c8;
+
+$blue-01: #0098ff;
+$blue-02: #d5eeff;
+
+$purple-01: #9747ff;
+$purple-02: #f0e4ff;
+
+$hashtag-colors: (
+  RED: (
+    $pink-02,
+    $pink-01,
+  ),
+  ORANGE: (
+    $orange-02,
+    $orange-01,
+  ),
+  YELLOW: (
+    $yellow-02,
+    $yellow-01,
+  ),
+  GREEN: (
+    $green-02,
+    $green-01,
+  ),
+  BLUE: (
+    $blue-02,
+    $blue-01,
+  ),
+  PURPLE: (
+    $purple-02,
+    $purple-01,
+  ),
+);

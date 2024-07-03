@@ -1,0 +1,49 @@
+.notification-popover {
+  overflow-y: scroll;
+  padding: 30px 8px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+  border-radius: 0;
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+
+  @media (min-width: 768px) {
+    position: absolute;
+    width: 360px;
+    height: 648px;
+    top: -10px;
+    left: 90px;
+    border-radius: 10px;
+  }
+
+  .notification-close {
+    position: absolute;
+    left: 20px;
+    top: 32px;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .setting-icon {
+    position: absolute;
+    right: 20px;
+    top: 27px;
+
+    @media (min-width: 48rem) {
+      top: 20px;
+    }
+  }
+
+  h2 {
+    @include font-style(20px, $black-01, 700);
+    color: $white-01;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
